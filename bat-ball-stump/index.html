@@ -15,6 +15,8 @@
     <button
       onclick="
     console.log('You have choose batting'); 
+    let randomNumber = parseInt(Math.random() * 3) + 1;
+      console.log(randomNumber); 
     
     if(randomNumber === 2 ){
       alert('You Win!');
@@ -29,7 +31,9 @@
     >
       Bat</button
     ><button
-      onclick="console.log('You have choose balling');   
+      onclick="console.log('You have choose balling');
+        randomNumber = parseInt(Math.random() * 3) + 1;
+      console.log(randomNumber); 
     if(randomNumber === 3){
       alert('You Win!');
     }
@@ -44,6 +48,8 @@
       Ball</button
     ><button
       onclick="console.log('You have choose Stump'); 
+      randomNumber = parseInt(Math.random() * 3) + 1;
+      console.log(randomNumber); 
     if(randomNumber === 1){
       alert('You Win!');
     }
@@ -57,9 +63,6 @@
       Stump
     </button>
 
-    <script>
-      let randomNumber = parseInt(Math.random() * 3) + 1;
-      console.log(randomNumber);
-    </script>
+    <script></script>
   </body>
 </html>
