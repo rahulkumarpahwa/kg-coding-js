@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bat Ball Stump</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+    console.log('You have choose batting'); 
+    
+    if(randomNumber === 2 ){
+      alert('You Win!');
+    }
+    else if (randomNumber === 1){
+     alert('Match Tie!'); 
+    }
+    else {
+      alert('You lose!');
+    }
+    "
+    >
+      Bat</button
+    ><button
+      onclick="console.log('You have choose balling');   
+    if(randomNumber === 3){
+      alert('You Win!');
+    }
+    else if (randomNumber === 1 ) {
+      alert('You lose!');
+    }
+    else{
+      alert ('Match Tie!');
+    }
+    "
+    >
+      Ball</button
+    ><button
+      onclick="console.log('You have choose Stump'); 
+    if(randomNumber === 1){
+      alert('You Win!');
+    }
+    else if (randomNumber === 3){
+      alert('Match Tie!');
+    }
+    else {
+      alert('You lose!');
+    }"
+    >
+      Stump
+    </button>
+
+    <script>
+      let randomNumber = parseInt(Math.random() * 3) + 1;
+      console.log(randomNumber);
+    </script>
+  </body>
+</html>
