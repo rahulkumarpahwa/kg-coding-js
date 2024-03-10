@@ -6,55 +6,93 @@
     <title>Bat Ball Stump</title>
     <style>
       body {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
-      table {
-        text-align: center;
+
+      body table {
+        margin: 20px 0px;
+      }
+
+      .top-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+      .button-container button {
+        margin: 5px 10px;
+      }
+
+      table,
+      tr,
+      td {
         border-collapse: collapse;
-        border: 2px solid rgb(140 140 140);
-      }
-      table tr {
+        border: 2px solid black;
+        padding: 5px;
         text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>Bat Ball Stump Game</h1>
-    <button
-      onclick="
+    <div class="top-container">
+      <h1>Bat Ball Stump Game</h1>
+      <div class="button-container">
+        <button
+          onclick="
     console.log('You have choose batting'); 
     Result (randomNum(), 1 );
     "
-    >
-      Bat</button
-    ><button
-      onclick="console.log('You have choose balling');
+        >
+          Bat 🏏
+        </button>
+
+        <button
+          onclick="console.log('You have choose balling');
           Result (randomNum(), 2 )"
-    >
-      Ball</button
-    ><button
-      onclick="console.log('You have choose Stump'); 
+        >
+          Ball ⚾</button
+        ><button
+          onclick="console.log('You have choose Stump'); 
       Result (randomNum(), 3 )
     "
-    >
-      Stump
-    </button>
-
-    <table>
-      <tr>
-        <th>Score Board</th>
-      </tr>
-      <tr>
-        <td>Computer Score</td>
-        <td>User Score</td>
-        <td>Tie</td>
-      </tr>
-      <tr>
-        <td id="com">0</td>
-        <td id="user">0</td>
-        <td id="tie">0</td>
-      </tr>
-    </table>
+        >
+          Stump 🚨
+        </button>
+        <button
+          onclick="
+      
+      localStorage.clear();
+      window.location.reload();
+      "
+        >
+          Reset ❌
+        </button>
+      </div>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th colspan="3">Score Board</th>
+        </tr>
+        <tr>
+          <td>Computer Score</td>
+          <td>User Score</td>
+          <td>Tie Match</td>
+        </tr>
+        <tr>
+          <td id="com">0</td>
+          <td id="user">0</td>
+          <td id="tie">0</td>
+        </tr>
+      </table>
+    </div>
 
     <script>
       let randomNumber;
@@ -64,11 +102,11 @@
         return randomNumber;
       }
 
-      let score = {
-        computerScore: 0,
-        userScore: 0,
-        tie: 0,
-      };
+      // let score = {
+      //   computerScore: 0,
+      //   userScore: 0,
+      //   tie: 0,
+      // };
 
       function Result(computerValue, userValue) {
         if (userValue === computerValue) {
@@ -90,6 +128,21 @@
           score.computerScore += 1;
           document.querySelector("#com").innerText = score.computerScore;
         }
+        localStorage.setItem("score", JSON.stringify(score));
+      }
+
+      let getScore = JSON.parse(localStorage.getItem("score"));
+      if (getScore != undefined) {
+        score = getScore;
+        document.querySelector("#tie").innerText = score.tie;
+        document.querySelector("#user").innerText = score.userScore;
+        document.querySelector("#com").innerText = score.computerScore;
+      } else {
+        score = {
+          computerScore: 0,
+          userScore: 0,
+          tie: 0,
+        };
       }
     </script>
   </body>
