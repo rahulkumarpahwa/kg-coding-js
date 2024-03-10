@@ -8,6 +8,14 @@
       body {
         text-align: center;
       }
+      table {
+        text-align: center;
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+      }
+      table tr {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -32,6 +40,22 @@
       Stump
     </button>
 
+    <table>
+      <tr>
+        <th>Score Board</th>
+      </tr>
+      <tr>
+        <td>Computer Score</td>
+        <td>User Score</td>
+        <td>Tie</td>
+      </tr>
+      <tr>
+        <td id="com">0</td>
+        <td id="user">0</td>
+        <td id="tie">0</td>
+      </tr>
+    </table>
+
     <script>
       let randomNumber;
       function randomNum() {
@@ -39,19 +63,32 @@
         console.log(randomNumber);
         return randomNumber;
       }
+
+      let score = {
+        computerScore: 0,
+        userScore: 0,
+        tie: 0,
+      };
+
       function Result(computerValue, userValue) {
         if (userValue === computerValue) {
           alert("Match Tie");
+          score.tie += 1;
+          document.querySelector("#tie").innerText = score.tie;
         } else if (
           computerValue === userValue + 1 ||
           userValue - 2 === computerValue
         ) {
           alert("You Win!");
+          score.userScore += 1;
+          document.querySelector("#user").innerText = score.userScore;
         } else if (
           userValue - 1 === computerValue ||
           userValue + 2 === computerValue
         ) {
           alert("You lose!");
+          score.computerScore += 1;
+          document.querySelector("#com").innerText = score.computerScore;
         }
       }
     </script>
