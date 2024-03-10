@@ -4,41 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bat Ball Stump</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      body table {
-        margin: 20px 0px;
-      }
-
-      .top-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .button-container {
-        display: flex;
-        align-items: center;
-      }
-      .button-container button {
-        margin: 5px 10px;
-      }
-
-      table,
-      tr,
-      td {
-        border-collapse: collapse;
-        border: 2px solid black;
-        padding: 5px;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="top-container">
@@ -84,7 +50,7 @@
         <tr>
           <td>Computer Score</td>
           <td>User Score</td>
-          <td>Tie Match</td>
+          <td>Tie Matches</td>
         </tr>
         <tr>
           <td id="com">0</td>
@@ -92,13 +58,34 @@
           <td id="tie">0</td>
         </tr>
       </table>
+
+      <h3 class="result" style="text-align: center"></h3>
+      <h3 class="compMove" style="text-align: center"></h3>
+    </div>
+    <div>
+      <h5>Rules To Play game:</h5>
+      <ul>
+        <li>
+          Click on the any one icon (Bat🏏, Ball⚾, Stump🚨) to start the game.
+        </li>
+        <li>The score will save even after refresh until you press Reset❌</li>
+        <li>If you and Computer chooses same thing then Match will tie.</li>
+        <li>If you choose Bat and Computer chooses Ball then you won!!</li>
+        <li>If you choose Ball and Computer chooses Bat then you lose!!</li>
+      </ul>
     </div>
 
     <script>
       let randomNumber;
       function randomNum() {
         randomNumber = parseInt(Math.random() * 3) + 1;
-        console.log(randomNumber);
+        // console.log(randomNumber);
+
+        document.querySelector(
+          ".compMove"
+        ).innerHTML = `<b>Computer Choice is ${
+          randomNumber === 1 ? "Bat." : randomNumber === 2 ? "Ball." : "Stump."
+        }</b>`;
         return randomNumber;
       }
 
@@ -110,21 +97,24 @@
 
       function Result(computerValue, userValue) {
         if (userValue === computerValue) {
-          alert("Match Tie");
+          // alert("Match Tie");
+          document.querySelector(".result").innerHTML = "<b>Match Tie!!</b>";
           score.tie += 1;
           document.querySelector("#tie").innerText = score.tie;
         } else if (
           computerValue === userValue + 1 ||
           userValue - 2 === computerValue
         ) {
-          alert("You Win!");
+          document.querySelector(".result").innerHTML = "<b>You Won!!</b>";
+          // alert("You Win!");
           score.userScore += 1;
           document.querySelector("#user").innerText = score.userScore;
         } else if (
           userValue - 1 === computerValue ||
           userValue + 2 === computerValue
         ) {
-          alert("You lose!");
+          document.querySelector(".result").innerHTML = "<b>You Lose!!</b>";
+          // alert("You lose!");
           score.computerScore += 1;
           document.querySelector("#com").innerText = score.computerScore;
         }
