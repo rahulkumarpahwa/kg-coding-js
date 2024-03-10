@@ -15,54 +15,45 @@
     <button
       onclick="
     console.log('You have choose batting'); 
-    let randomNumber = parseInt(Math.random() * 3) + 1;
-      console.log(randomNumber); 
-    
-    if(randomNumber === 2 ){
-      alert('You Win!');
-    }
-    else if (randomNumber === 1){
-     alert('Match Tie!'); 
-    }
-    else {
-      alert('You lose!');
-    }
+    Result (randomNum(), 1 );
     "
     >
       Bat</button
     ><button
       onclick="console.log('You have choose balling');
-        randomNumber = parseInt(Math.random() * 3) + 1;
-      console.log(randomNumber); 
-    if(randomNumber === 3){
-      alert('You Win!');
-    }
-    else if (randomNumber === 1 ) {
-      alert('You lose!');
-    }
-    else{
-      alert ('Match Tie!');
-    }
-    "
+          Result (randomNum(), 2 )"
     >
       Ball</button
     ><button
       onclick="console.log('You have choose Stump'); 
-      randomNumber = parseInt(Math.random() * 3) + 1;
-      console.log(randomNumber); 
-    if(randomNumber === 1){
-      alert('You Win!');
-    }
-    else if (randomNumber === 3){
-      alert('Match Tie!');
-    }
-    else {
-      alert('You lose!');
-    }"
+      Result (randomNum(), 3 )
+    "
     >
       Stump
     </button>
 
-    <script></script>
+    <script>
+      let randomNumber;
+      function randomNum() {
+        randomNumber = parseInt(Math.random() * 3) + 1;
+        console.log(randomNumber);
+        return randomNumber;
+      }
+      function Result(computerValue, userValue) {
+        if (userValue === computerValue) {
+          alert("Match Tie");
+        } else if (
+          computerValue === userValue + 1 ||
+          userValue - 2 === computerValue
+        ) {
+          alert("You Win!");
+        } else if (
+          userValue - 1 === computerValue ||
+          userValue + 2 === computerValue
+        ) {
+          alert("You lose!");
+        }
+      }
+    </script>
   </body>
 </html>
