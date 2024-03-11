@@ -37,7 +37,7 @@
       updateCount();
 
       let time = new Date().getHours();
-      console.log(time);
+      // console.log(time);
       let greet =
         time > 12 && time < 17
           ? "Good Afternoon "
@@ -45,6 +45,17 @@
           ? "Good Night"
           : "Good Morning";
       let h1 = (document.querySelector("#time").innerText = greet);
+
+      let arr = [5, 6];
+      arr.push(7);
+      //console.log(arr);
+      arr.unshift(4);
+      //console.log(arr);
+
+      function Elem(arri, position) {
+        return arri[position - 1];
+      }
+      // console.log(Elem([1,2,2,45,66], 4));
     </script>
   </body>
 </html>

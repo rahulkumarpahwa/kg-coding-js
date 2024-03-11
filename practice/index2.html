@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      id="button"
+      onclick="
+      setTimeout(() => {
+          button.style.width = '50px';
+          button.style.height = '50px';
+        }, 2000);
+      "
+    >
+      test
+    </button>
+
+    <script>
+      // setTimeout(() => {
+      //   console.log("Good Morning!");
+      // }, 5000);
+
+      // let intervalId = setInterval(() => {
+      //   console.log("good morning!!");
+      // }, 1000);
+
+      // setTimeout(() => {
+      //   clearInterval(intervalId);
+      // }, 10000);
+
+      let multiply = (num1, num2) => {
+        return num1 * num2;
+      };
+
+      // console.log(multiply(10, 20));
+
+      let twice = (x) => 2 * x;
+
+      let runTwice = (twice, num) => {
+        return twice(num);
+      };
+
+      //console.log(runTwice(twice, 4));
+      let button = document.getElementById("button");
+
+      // button.addEventListener("click", () => {
+      //   setTimeout(() => {
+      //     button.style.width = "50px";
+      //     button.style.height = "50px";
+      //   }, 2000);
+      // });
+
+      let arr = [2, 2, 2, 2, 2, 3];
+      let sum = (arr) => {
+        let result = 0;
+        for (ar of arr) {
+          result += ar;
+        }
+        return result;
+      };
+
+      //console.log(sum(arr));
+      let sum2 = (arr) => {
+        let result = 0;
+        arr.forEach((num) => {
+          result += num;
+        });
+        return result;
+      };
+
+      // console.log(sum2(arr));
+
+      let squares = arr.map((num) => {
+        return num * num;
+      });
+
+      console.log(squares);
+    </script>
+  </body>
+</html>
