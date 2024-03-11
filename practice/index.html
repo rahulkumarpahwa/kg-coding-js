@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise</title>
+    <style>
+      #count {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+        border: none;
+        border-radius: 50px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="time"></h1>
+    <button id="count" onclick="onClick();"></button>
+    <script>
+      let count = localStorage.getItem("count") || 0;
+      let onClick = () => {
+        count++;
+        updateCount();
+        localStorage.setItem("count", count);
+      };
+
+      function updateCount() {
+        let button = document.querySelector("#count");
+        count % 2 === 0
+          ? (button.style.backgroundColor = "red")
+          : (button.style.backgroundColor = "green");
+        button.innerText = count;
+      }
+
+      updateCount();
+
+      let time = new Date().getHours();
+      console.log(time);
+      let greet =
+        time > 12 && time < 17
+          ? "Good Afternoon "
+          : time > 17
+          ? "Good Night"
+          : "Good Morning";
+      let h1 = (document.querySelector("#time").innerText = greet);
+    </script>
+  </body>
+</html>

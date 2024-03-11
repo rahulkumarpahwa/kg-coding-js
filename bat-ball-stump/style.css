@@ -24,14 +24,15 @@ body table {
   margin: 5px 10px;
   width: 100px;
   height: 100px;
-  font-size: 30px;
+  font-size: 28px;
   border: none;
   background: none;
 }
 
 .button-container button:hover {
-  border: 2px solid black;
-  border-radius: 20px;
+  border: 2px solid grey;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 ul {
