@@ -8,16 +8,13 @@
   </head>
   <body>
     <div class="container">
+      <h1>Todo App</h1>
       <div class="top">
-        <h1>Todo App</h1>
-        <input type="text" placeholder="Enter your Task" id="task" />
-        <input type="date" name="" id="date" required />
-        <button onclick="addCard();">Add</button>
+        <input type="textbox" id="inputTask" placeholder="enter your task" />
+        <input type="date" id="inputDate" value="2017-06-01" />
+        <button onclick="addCard()">Add</button>
       </div>
-      <div id="todoContainer">
-      <p id="p"></p>
-      <p id="date-enter"></p>
-      </div>
+      <div id="taskContainer"></div>
     </div>
 
     <script src="script.js"></script>
