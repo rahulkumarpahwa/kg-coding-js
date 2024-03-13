@@ -21,7 +21,7 @@ function displayCard() {
   // console.log(taskList);
   newHtml = "";
   for (let i = 0; i < taskList.length; i++) {
-    newHtml += `<div class="outputDiv" "> <p> ${taskList[i].newTask}</p> <p> ${taskList[i].newDate}</p> <button onclick="taskList.splice(${i}, 1); displayCard();">Delete</button></div>`;
+    newHtml += `<div class="outputDiv" "> <p> ${taskList[i].newTask}</p> <p> ${taskList[i].newDate}</p> <button id="delete" onclick="taskList.splice(${i}, 1); displayCard();">Delete</button></div>`;
   }
   container.innerHTML = newHtml;
 }

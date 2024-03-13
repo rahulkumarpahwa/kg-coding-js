@@ -14,19 +14,14 @@
 
 .top input,
 .top button {
-  margin: 0px 20px;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  border-radius: 20px;
+  margin: 0px 10px;
 }
 
 .outputDiv {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin: 15px 10px;
-  background-color: aquamarine;
   border-radius: 20px;
   padding: 0 20px;
 }
@@ -36,4 +31,16 @@
 }
 .outputDiv p {
   margin-right: 20px;
+}
+
+#delete {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+#add {
+  background-color: green;
+  color: white;
+  padding: 10px;
 }
