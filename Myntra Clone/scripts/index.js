@@ -1,19 +1,21 @@
-let bagItems = [];
+let bagItems;
 
 function onLoad() {
+  let bagItemsStr = localStorage.getItem("bagItems");
+  bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
   displayItemsOnHomePage();
-  displayBagItem();
+  displayBagIcon();
 }
 
 function addToBag(id) {
   // console.log(id);
-  bagItems.push(items[id - 1]);
+  bagItems.push(id);
   // console.log(bagItems);
   localStorage.setItem("bagItems", JSON.stringify(bagItems));
-  displayBagItem();
+  displayBagIcon();
 }
 
-function displayBagItem() {
+function displayBagIcon() {
   let bagItemCountElement = document.querySelector(".bag-item-count");
   if (bagItems.length > 0) {
     bagItemCountElement.style.visibility = "visible";
@@ -25,6 +27,10 @@ function displayBagItem() {
 
 function displayItemsOnHomePage() {
   const main_container = document.querySelector(".main_container");
+if (!main_container){
+  return;
+}
+
   for (item of items) {
     const {
       image,
