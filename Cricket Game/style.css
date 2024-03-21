@@ -1,3 +1,7 @@
+* {
+  background-color: #dddcdb;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -6,7 +10,7 @@ body {
 }
 
 body table {
-  margin: 20px 0px;
+  margin: 15px 0px;
 }
 
 .top-container {
@@ -45,6 +49,6 @@ tr,
 td {
   border-collapse: collapse;
   border: 2px solid black;
-  padding: 5px;
+  padding: 3px;
   text-align: center;
 }

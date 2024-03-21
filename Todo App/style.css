@@ -1,3 +1,7 @@
+* {
+  background-color: #dddcdb;
+}
+
 .container {
   display: flex;
   justify-content: center;

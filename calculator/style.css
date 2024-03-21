@@ -1,7 +1,16 @@
+* {
+  background-color: #dddcdb;
+}
+
+#input {
+  background-color: aliceblue;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 90vh;
 }
 
@@ -13,7 +22,7 @@ body {
   align-items: center;
   padding: 5px 10px;
   border-radius: 15px;
-  background-color: aquamarine;
+  background-color: #efb48a;
 }
 
 .container input {
@@ -25,6 +34,7 @@ body {
 .button-container {
   display: flex;
   flex-wrap: wrap;
+  background-color: #efb48a;
 }
 
 .button-container button {
