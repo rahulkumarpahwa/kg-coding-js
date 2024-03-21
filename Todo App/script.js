@@ -1,4 +1,9 @@
-let taskList = [{ newTask: "open shop", newDate: "12 / 31 / 1999" }];
+let taskList = [
+  { newTask: "Content Writing", newDate: "12/03/2024" },
+  { newTask: "Studying Documentation", newDate: "12/03/2024" },
+  { newTask: "Reactjs Projects", newDate: "12/03/2024" },
+  { newTask: "Javascript Notes ", newDate: "12/03/2024" },
+];
 let task = document.querySelector("#inputTask");
 let date = document.querySelector("#inputDate");
 let container = document.querySelector("#taskContainer");
@@ -13,7 +18,7 @@ function addCard() {
   };
   taskList.push(completeTask);
   task.value = "";
-  date.value = "12 / 31 / 1999";
+  date.value = "";
   displayCard();
 }
 

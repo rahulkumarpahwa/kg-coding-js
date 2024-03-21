@@ -27,11 +27,12 @@ body table {
   font-size: 28px;
   border: none;
   background: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .button-container button:hover {
   border: 2px solid grey;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
