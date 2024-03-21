@@ -3,7 +3,7 @@ This App has been created by [Rahul Kumar](https://linkedin.com/in/rahulkumarpah
 1. Calculator
 2. Cricket Game (Bat Ball Stump Game)
 3. Todo List App
-4. Myntra Clone
+4. Myntra Working Clone
 
 # Features :
 - To Visit these just click on the Image of the Slider and then that app will open.
