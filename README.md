@@ -1,7 +1,7 @@
 # Introduction: 
 This App has been created by [Rahul Kumar](https://linkedin.com/in/rahulkumarpahwa) as a part of learning JavaScript. There are four project in it as: 
 1. Calculator
-2. Bat Ball Stump Game (Cricket Game)
+2. Cricket Game (Bat Ball Stump Game)
 3. Todo List App
 4. Myntra Clone
 
@@ -16,4 +16,4 @@ This App has been created by [Rahul Kumar](https://linkedin.com/in/rahulkumarpah
 - JavaScript
 - Google Fonts
 
-# Live : [Rahul Kumar](https://js-projects-rahul.vercel.app/)
+# Live : [Javascript Projects](https://js-projects-rahul.vercel.app/)
