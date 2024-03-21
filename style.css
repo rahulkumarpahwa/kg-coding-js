@@ -2,24 +2,51 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #bda791;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logo {
+  font-weight: 900;
+  margin-left: 30px;
+  background-color: #efb48a;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(89, 86, 86);
 }
 
 .head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(115, 115, 115, 0.5) 1.95px 1.95px 5px;
+  background-color: #efb48a;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   margin: 20px 25px;
+  background-color: #efb48a;
+}
+
+.navitems {
+  background-color: #efb48a;
 }
 
 .navitems a {
   text-decoration: none;
   margin-right: 25px;
+  background-color: #efb48a;
+  color: rgb(89, 86, 86);
+}
+
+.navitems a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .carousel-button {
@@ -33,7 +60,7 @@
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0 0.5rem;
-  color: rgb(54, 54, 54);
+  color: rgb(87, 87, 87);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -57,9 +84,9 @@
 
 .main {
   width: 90%;
-  height: 450px;
+  height: 420px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 20px;
   box-shadow: 0px 0px 3px grey;
   position: relative;
   overflow: hidden;
@@ -77,4 +104,47 @@
 .slide img {
   width: 100%;
   height: 100%;
+}
+
+.about {
+  margin: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(13, 12, 12);
+}
+
+.about-container h1,
+.about-container h2,
+.about-container h3,
+.about-container ul {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.about-container h1 {
+  text-align: center;
+  font-weight: 900;
+}
+
+.about-container h3 a,
+.footer h3 a {
+  color: rgb(75, 73, 73);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #efb48a;
+  margin-top: 15px;
+  padding: 10px;
+  color: rgb(89, 86, 86);
+}
+
+.footer h3 {
+  background-color: #efb48a;
+}
+
+.footer h3 a {
+  background-color: #efb48a;
 }
