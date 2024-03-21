@@ -16,4 +16,4 @@ This App has been created by [Rahul Kumar](https://linkedin.com/in/rahulkumarpah
 - JavaScript
 - Google Fonts
 
-# Live : [Rahul Kumar](https://linkedin.com/in/rahulkumarpahwa)
+# Live : [Rahul Kumar](https://js-projects-rahul.vercel.app/)
